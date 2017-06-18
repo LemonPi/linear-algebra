@@ -1,0 +1,40 @@
+## complex numbers definition
+- a complex number is an ordered pair (a, b) where a,b E R
+	- writen as a + bi
+- i = sqrt(-1)
+- C is the set of all complex numbers
+	- C = {a + bi : a,b E R}
+- addition (a + bi) + (c + di) = (a + c) + (b + d)i
+- multiplication (a + bi)(c + di) = (ac - bd) + (ad + bc)i
+	- i^2 = -1 then apply normal arithmetic rules
+
+## +/* properties
+- commutativity w + z = z + w and wz = zw
+- associativity (z1 + z2) + z3 = z1 + (z2 + z3) and (z1*z2)z3 = z1(z2*z3)
+- identities z + 0 = z and z * 1 = z
+- additive inverse
+	- for every z E C, there exists a unique w E C s.t. z + w = 0
+	- (a + c) + (b + d)i = 0 = 0 + 0i
+		- (a + c) = 0 
+		- a = -c
+		- (b + d) = 0
+		- b = -d
+		- exists because a,b,c,d E R
+	- so -z = -a + -bi
+- multiplicative inverse
+	- for every z E C, z != 0, tehre exists a unique w E C s.t. zw = 1
+	- (a + bi)(c + di) = 1 = 1 + 0i
+		- ac - bd = 1
+		- ad + bc = 0
+		- system of equations, solve in terms of a,b
+			- a^2c - abd = a
+			- abd + b^2c = 0
+			- a^2c + b^2c = a
+			- c = a / (a^2 + b^2)
+			- abc - b^2d = b
+			- a^2d + abc = 0
+			- -b^2d - a^2d = b
+			- d = -b / (a^2 + b^2)
+			- c,d exists when a^2 + b^2 != 0, which is when z != 0 = 0 + 0i
+	- so 1/z = (a - b) / (a^2 + b^2)
+- distributive l(w + z) = lw + lz
