@@ -1,0 +1,36 @@
+## example vector spaces
+- R2 is a plane, containing all ordered pairs of R
+	- R2 = {(x,y) : x,y E R}
+- R3 is ordinary space, containing all ordered triples of R
+	- R3 = {(x,y,z) : x,y,z E R}
+
+## lists
+- a **list** has **length** n, where n is a non-negative integer
+- also known as n-tuple
+- is an ordered collection of n objects
+	- objects could be numbers, other lists, or more abstract entities
+	- object type is homogenous
+- separated by commas and surrounded by parentheses
+	- (x_1,...,x_n)
+- for j E {1,...,n}, x_j is the jth **coordinate** of the list
+- by definition of n has a finite length, so (x_1, x_2, ...) is not a list
+- () is a list of length 0
+	- defined to avoid trivial exceptions in theorems
+- two lists are equal if their lengths are equal and the corresponding coordinates are equal
+
+
+## more general examples
+- higher dimensional analogues of R2 and R3
+	- n is a positive integer
+	- Fn = {(x_1,...,x_n) : x_j E F for j = 1,...,n}
+		- convention is that if a single letter denotes an element of Fn, then subscripts denote that element's coordinate
+			- x E Fn, then x is (x_1,...,x_n)
+			- mostly work with x and avoid explicit coordinates if possible
+- 0 = (0,...,0) context makes clear what 0 refers to
+	- for x E Fn, x + 0 = x is clearly using 0 as a list because addition with a number is not defined
+- elements of R2 can be geometrically represented as points or vectors
+	- when thought of as an arrow, we refer to it as a **vector**
+	- (2, -3, 17, pi, sqrt(2)) is an element in R5 and can be also referred to as a point or vector
+		- don't need to worry about geometric or physical meaning
+- addition in R2 involves moving arrows parallel to themselves
+	- moving parallel to themselves without changing meaning is also true generally
