@@ -1,0 +1,5 @@
+## brief mention of fields
+- a field is denoted as F
+- R and C are fields
+	- many proofs on R or C can be generalized to F so any field would work
+- elements of F are called **scalars**
