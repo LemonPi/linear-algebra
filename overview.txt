@@ -1,0 +1,2 @@
+## overview
+- linear algebra is the study of **linear maps** on finite-dimensional **vector spaces**
