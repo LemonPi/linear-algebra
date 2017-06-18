@@ -38,3 +38,10 @@
 			- c,d exists when a^2 + b^2 != 0, which is when z != 0 = 0 + 0i
 	- so 1/z = (a - b) / (a^2 + b^2)
 - distributive l(w + z) = lw + lz
+
+## derived operations
+- subtraction is the addition of the additive inverse
+	- w - z = w + (-z)
+- division is the multiplication of the multiplicative inverse
+	- w/z = w(1/z)
+	- only for z != 0
