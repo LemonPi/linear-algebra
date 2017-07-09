@@ -34,3 +34,69 @@
 		- don't need to worry about geometric or physical meaning
 - addition in R2 involves moving arrows parallel to themselves
 	- moving parallel to themselves without changing meaning is also true generally
+
+## definition
+- motivation for defining a vector space comes from properties of addition and scalar multiplication on Fn
+- a vector space is **a set V along with an addition and scalar multiplication on V satifsying properties** 
+	- addition is a function mapping each u,v E V --> u + v E V
+	- scalar multiplication is a function mapping each a E F and each v E V --> av E V
+	- formal properties
+		- commutativity u + v = v + u for all u,v E V
+		- associativity (u + v) + w = u  + (v + w) and (ab)v = a(bv) for all u,v,w E V, and all a,b E F
+		- additive identity there exists an element 0 E V s.t. v + 0 = v for all v E V
+		- additive inverse for every v E V, there exists w E V s.t. v + w = 0
+		- multiplicative identity 1v = v for all v E V
+		- distributive properties a(u + v) = au + av and (a + b)u = au + bu for all a,b E F and all u,v E V
+	- scalar multiplication in a vector space depends on F
+		- more precisely V is a vector space over F
+			- Rn is a vector space over R
+			- Cn is a vector space over C
+		- usually the choice of F is either obvious from context or irrelevant
+			- so often goes without mention
+- elements of a vector space are called vectors or points
+
+## more exotic/interseting examples
+- trivial vector space of {0} is valid but not interesting
+- Finf is one instance of Fn and is a valid vector space
+	- Finf = {(x1, x2, ...) : xj E F for j = 1,2,...}
+	- addition defined as (x1, x2, ...) + (y1, y2, ...) = (x1 + y1, x2 + y2, ...)
+	- scalar multiplication defined as a(x1, x2, ...) = (ax1, ax2, ...)
+- polynomials
+	- function f: F --> F is called a polynomial with coefficients in F 
+	  if there exists a0, ..., am E F s.t. p(z) = a0 + a1*z + a2*z^2 + ... + am*z^m for all z E F
+	- we define P(F) to be the set of all polynomials with coefficients in F
+		- addition: if p,q E P(F), then p + q is the polynomial where (p + q)(z) = p(z) + q(z)
+			- p(z) = 2z + z^3
+			- q(z) = 7 + 4z
+			- (p + q)(z) = 7 + 6z + z^3
+		- scalar multiplication: if a E F and p E P(F) then ap is the polynomial where (ap)(z) = ap(z)
+			- p(z) = 2z + z^3
+			- (5p)(z) = 5(2z + z^3)
+	- verify
+		- commutativity
+			- (p + q)(z) = p(z) + q(z)
+			- = q(z) + p(z) by commutativity of F (since p(z) and q(z) E F)
+			- = (q + p)(z) by definition of addition
+			- therefore commutativity holds
+		- associativity
+			- ((p + q) + r)(z) = (p + q)(z) + r(z) = p(z) + q(z) + r(z) by definition
+			- (p + (q + r))(z) = p(z) + (q + r)(z) = p(z) + q(z) + r(z) by definition
+			- they are equal and associativity holds
+		- additive identity
+			- (p + 0)(z) = p(z) + 0(z) = p(z)
+			- 0(z) = 0 for all z E F
+			- this polynomial exists and has all 0 coefficients
+		- additive inverse
+			- (p + -p)(z) = p(z) + (-p)(z) = 0
+			- -p(z) = (-p)(z)
+			- this polynomial exists and has bi = -ai for all coefficients ai, i E 0, ... m, of p(z)
+			- (-p)(z) = -a0 + -a1*z + -a2*z^2 + ... + -am*z^m for all z E F by definition of polynomials
+			- = -(a0 + a1*z + a2*z^2 + ... + am*z^m) by distribution of -1 on F
+			- = -p(z) by definition of p(z)
+		- multplicative identity
+			- (ap)(z) = ap(z) = p(z)
+			- a exists and is equal to the multplicative identity of F (1), which exists
+		- distributive properties
+			- too lazy, verify later?
+	- demonstrates that not all vector spaces consist of lists
+		- P(F) elements consist of functions on F, not lists
