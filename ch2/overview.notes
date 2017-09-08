@@ -1,0 +1,11 @@
+-----------------------------------------------------------
+    Overview
+-----------------------------------------------------------
+- finite dimensional vector spaces
+	- first chapter was about general vector spaces
+	- linear algebra focuses on finite-dimensional ones
+	- concepts associated with these spaces
+		- span
+		- linear independence
+		- basis
+		- dimension
