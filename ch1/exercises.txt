@@ -1,0 +1,171 @@
+## exercises
+1. find c, d E R != 0 s.t. 1/(a + bi) = c + di
+	1 = (c + di)(a + bi)
+	1 = ca + cbi + dai - db
+	1 = ca - db and 0 = cb + da
+		a = ca^2 - dba
+		0 = cb^2 + dba
+		a = ca^2 + cb^2
+		c = a/(a^2 + b^2)
+
+		b = cba - db^2
+		0 = cba + da^2
+		b = -db^2 - da^2
+		d = -b/(a^2 + b^2)
+
+2. show that (-1 + sqrt(3)i) / 2 is a cube root of 1
+	(-1 + sqrt(3)i) * (-1 + sqrt(3)i)/4
+	= (1 - 2sqrt(3)i - 3)/4
+	= (-2 - 2sqrt(3)i)/4
+	= (-1 - sqrt(3)i)/2
+	(1 - (-1)*3)/4
+	= 4/4
+	= 1
+
+3. prove that -(-v) = v for v E V
+	0 = -v + v by definition of inverse
+	-(-v) = v
+
+4. prove that if a E F, v E V, and av = 0, then a = 0 or v = 0
+	suppose av = 0 and a != 0, v != 0
+	since a != 0 we can divide by a
+	v = 0 contradiction
+	therefore either a = 0 or v = 0
+
+5. a) x1 + 2x2 + 3x3 = 0
+		0 = 0 + 2*0 + 3*0 so additive identity exists
+
+		x1 + 2x2 + 3x3 + (y1 + 2y2 + 3y3) = 0 + 0
+		= (x1 + y1) + 2(x2 + y2) + 3(x3 + y3) = 0
+		let ui = xi + yi, u1 + 2u2 + 3u3 = 0 so closed under addition
+
+		a(x1 + 2x2 + 3x3) = a * 0 = 0
+		let ui = a*xi, ... closed under scalar *
+
+		is a subspace
+
+	b) F3's additive identity is (0,0,0)
+		0 + 2*0 + 3*0 != 4
+		not a subspace due to lack of additive identity
+
+	c)	0*0*0 = 0
+		additive identity is fine
+
+		(x1,x2,x3) + (y1,y2,y3) = (x1+y1, x2+y2, x3+y3) under F3's addition defintion
+		(x1+y1)*(x2+y2)*(x3+y3) = 0
+		is not necessary true, for example
+		(1, 1, 0) + (0, 0, 1) = (1, 1, 1)
+		1*1*1 != 0
+		not a subspace due to lack of closure
+		under vector addition
+
+	d)	(0,0,0) -> 0 = 5*0
+		additive identity is fine
+
+		x1 + y1 = 5x3 + 5y3
+		= 5(x3 + y3)
+		fine, so closed under vector addition
+
+		a*x1 = a*5x3
+		a*x1 = 5(a*x3)
+		fine, so closed under scalar multiplication
+
+		is a subspace
+
+6. give an example of a nonempty subset U of R2
+s.t. U is closed under addition and under taking
+additive inverses, but U is not a subspace of R2
+
+	Always having inverses and being closed under
+	addition means u + -u = 0 the additive identity
+	must be in the set.
+
+	The only property left is scalar multiplication
+	so it must not satisfy this.
+
+	intuitively can think of this as being bounded by extent since scalar multiplication "scales" the vector,
+	but how can we not have closed scalar multiplication if addition and inverse is closed?
+
+	We can always add copies of the same vector
+	to multiply it by an integer, so the trick must
+	be to restrict non-integer multiples.
+
+	{(x1, x2) E R2: x1 = ceil(x1)}
+
+	(0,0) is contained because 0 = ceil(0)
+	this is closed under vector addition because
+	x1 + y1 = ceil(x1) + ceil(y1) = ceil(x1 + y1)
+
+	consider a = 0.5 and u = (1,0)
+	a*u = (0.5, 0) and 0.5 != ceil(0.5) = 1
+
+
+7. closed under scalar * but not subspace of R2
+	need cone passing through origin
+	{(x1,x2) E R2 : |x1| >= |x2|}
+
+	clearly a|x1| >= a|x2| since we can divide away a
+	if not 0, and 0 >= 0 if a = 0
+
+	consider (-1,1) + (1,1) = (0,2)
+
+8. prove that the intersection of any collection of subspaces of V is a subspace of V
+	since each subspace must contain the additive identity, their intersection must also contain it
+
+	consider two vectors u,v E U1, U2, ... Un (contained in each of the subspaces under consideration so is part of the intersection),
+	then u + v E U1, U2, ... Un because each subspace
+	is closed under addition, and so the intersect
+	is closed under vector addition
+
+	similar arugment holds for scalar multiplication
+
+9. prove that the union of two subspaces U1, U2 of V is a subspace of V iff U1 or U2 contains the other
+	The forward direction is easy.
+	Suppose U1 contains U2, then U1 union U2 = U1,
+	which is a subspace
+
+	For the backward direction consider u, a vector
+	that's in U1 but not in U2 and v, a vector in U2
+	that's not in U1
+
+	u = x1 + x2 since U1 is a subspace and any vector
+	can be described as the sum of two others given
+	closure under vector addition
+
+	v = y1 + y2 since U2 is a subspace with the same
+	argument. Then u + v E union because x1, x2, y1, y2 E union and u + v = x1 + x2 + y1 + y2
+	??? I don't intuitively see why it has to contain the other
+
+	maybe the argument goes that for u to not be in
+	U2, x1 and x2 must also not be in U2, then this
+	argument can be extended to all vectors until
+	just the additive identity remains, in which case
+	they become equal and contain each other.
+
+10. Suppose U is a subspace of V. What is U + U?
+	U because U is closed under vector addition since it's a subspace,
+	so U + U introduces no new elements
+
+11. Is subspace addition commutative? Associative?
+	It's commutative because it results in the set of pairwise sums,
+	and that's commutative since vector addition is commutative.
+
+	... similar argument for scalar multiplicatin
+
+12. Does the addition on subspaces of V have an additive identity?
+	Set containing just the additive identity because every other subspace
+	must contain this set, and adding it to each vector just returns that vector
+	Additive inverses do not exist - what would that entail for subspace addition?
+	Two subspaces added together to form the additive identity set?
+	By definition of subspace addition that can't exist.
+
+13. if U1 + W = U2 + W then we can describe every element of U1 + W as
+	u1 + w = u2 + w, where u1 is some vector from U1, u2 is some vector from U2, and w is some vector from W
+
+	u1 + w - w = u2 + w - w
+	u1 = u2 for all such vectors, so U1 = U2
+
+14. Suppose U is the subspace of P(F) consisting of p(z) = az^2 + bz^5, a,b E F.
+	Find a subspace W of P(F) s.t. P(F) = U ++ W
+
+15. Same problem as 13
