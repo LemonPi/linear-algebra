@@ -1,0 +1,26 @@
+-----------------------------------------------------------
+    Linear independence base cases
+-----------------------------------------------------------
+- any list of vectors containing the 0 vector is linearly dependent
+	- v = a1*0 + a2*v2 + ... + am*vm
+	- a1 can be anything
+	- non-unique mapping of coordinates to any spanned vector
+- any list of length 2 is linearly independent iff neither vector is a scalar multiple of the other
+	- forward direction proof by contradiction: assume they are scalar multiples of each other
+		- v1 = b*v2 by definition of being a scalar multiple
+		- 0 = a1*v1 + a2*v2
+		= a1*b*v2 + a2*v2
+		= (a1*b + a2)*v2
+		->a1*b + a2 = 0
+		- a2 = -a1*b
+		- for b != 0 there are infinite assignments to a1 and a2
+			- if b = 0 v1 is the zero vector and we proved that leads to linear dependence
+			- a1 and a2 assignable along a line with slope b
+		- not linearly dependent so contradiction
+	- backward direction: assume they are linearly independent
+		- consider the sum expression of v1
+		- v1 = a1*v1 + a2*v2
+		- since linearly independent, {a1,a2} here has to be unique
+		- if v1 = b*v2 then v1 = (a1*b + a2)*v2 leads to infinite valid assignments of {a1,a2}
+		- can't be scalar multiples of each other
+- a list of >2 elements is not necessarily linind if no element is a scalar multiple of another
