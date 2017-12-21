@@ -24,3 +24,25 @@
 		- if v1 = b*v2 then v1 = (a1*b + a2)*v2 leads to infinite valid assignments of {a1,a2}
 		- can't be scalar multiples of each other
 - a list of >2 elements is not necessarily linind if no element is a scalar multiple of another
+- removing vectors from a linearly independent list results in a linearly independent list
+	- suppose (v1,...,vm) is linearly independent
+	- 0 = a1*v1 + ... + aj*vj + ... + am*vm
+	- each ai must be 0, so each term is the 0 vector
+	- suppose we remove vector vj from the list
+	- 0 = a1*v1 + ... + am*vm still holds because we just removed addition of 0 vector
+	- thus list is still linind
+- empty list () is defined to be linearly independent for the above to always remain true
+-----------------------------------------------------------
+    Linear independence lemmas
+-----------------------------------------------------------
+- [2.4] if (v1,...,vm) is lindep and v1 != 0, there exists j E {2,...,m} s.t.
+a) vj E span(v1,...,v_(j-1)) contained in span defined by earlier vectors
+b) if the jth term is removed from (v1,...,vm) the span of the remaining list
+equals span(v1,...,vm)
+	- if lindep, some vector has to exist in the span of the other vectors
+	- and we can throw it out without affecting the span of the list
+	- proof 
+		- there exists a1,...,am E F, not all 0 s.t. a1*v1 + ... + am*vm = 0
+		- since v1 != 0, not all of a2,a3,...,am can be 0
+		- let j be the largest element of {2,...,m} s.t. aj != 0
+		
