@@ -1,0 +1,64 @@
+-----------------------------------------------------------
+    Exercises
+-----------------------------------------------------------
+1. 
+	1/(a + bi) 
+	= 1/(a + bi) * (a - bi)/(a - bi)
+	= (a - bi)/(a^2 - b^2 * i^2)
+	= (a - bi)/(a^2 + b^2) 
+	= a/(a^2 + b^2) + b/(a^2 + b^2) * i
+
+2. 
+	sq 
+	= (1 - 2sqrt(3)i + 3i^2)/4
+	= (-2 - 2sqrt(3)i)/4
+	= (-1 - sqrt(3)i)/2
+	cube 
+	= (1 - 3i^2)/4
+	= (1 + 3)/4
+	= 1
+
+3. 
+	by existence of an additive inverse for (-v) we have -v + -(-v) = 0
+	by existence of an additive inverse for v we have -v + v = 0
+	by uniqueness of the additive inverse v = -(-v)
+
+4. 
+	if a = 0, av = 0 trivially true
+	if a != 0, 1/a exists
+	av = av
+	v = 1/a (av)
+	= 1/a (0)
+	= 0
+
+5. 
+	a) subset contains F3's 0:  (0,0,0) : 0 + 2*0 + 3*0 = 0
+	(x1,x2,x3) + a(y1,y2,y3) : x1 + 2*x2 + 3*x3 = 0 and y1 + 2*y2 + 3*y3 = 0
+	we need x1+a*y1 + 2(x2+a*y2) + 3(x3+a*y3) = 0
+	distribute multiplication to get
+	(x1 + 2*x2 + 3*x3) + a*(y1 + 2*y2 + 3*y3)
+	= 0 + a*0
+	= 0
+	closed under scalar * and + so is subspace
+
+	b) subset doesn't contain 0 so not subspace
+
+	c) subset contains 0: 0*0*0 = 0
+	x1*x2*x3 = 0 and y1*y2*y3 = 0
+	(x1 + a*y1)*(x2 + a*y2)*(x3 + a*y3)
+	= x1*x2*x3 + a*y1*y2*y3 + cross terms
+	= 0 + cross terms
+	nothing guarantees cross terms are 0, so not a subspace
+
+	d) 0: 0 = 5*0 true 
+	x1 = 5*x3 and y1 = 5*y3, or x1 - 5*x3 = 0, y1 - 5*y3 = 0
+	want (x1 + a*y1) = 5*(x3 + a*y3)
+	x1 - 5*x3 + a(y1 - 5*y3)
+	= 0 + a(0)
+	= 0
+	closed under +* so is subspace
+
+6.	U = {x in R2 : x1, x2 integers}
+	not subspace because not closed under scalar multiplication
+
+7.	U = {x in R2 : x1*x2 >= 0} (gives 1st and 3rd quadrant)
